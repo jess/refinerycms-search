@@ -7,7 +7,7 @@ module Refinery
         results = []
 
         Refinery::Search.config.enable_for.each do |model|
-          model = model.safe_constantize
+          #model = model.safe_constantize
 
           if model.respond_to?(:refinery_search_scope)
             results << model.refinery_search_scope.with_query(query)
